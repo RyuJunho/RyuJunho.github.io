@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>분포 잠재 표현 기반 이미지 보정 어댑터</title>
+<meta name="description" content="소수 참조 이미지의 분포 잠재 표현을 조건으로 한 백본 무관 이미지 보정 어댑터 — 류준호 (VBLAB) 졸업논문 프로젝트 페이지">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap">
+<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">졸업논문 · Graduation Thesis</p>
+    <h1 class="title-ko">소수 참조 이미지의 분포 잠재 표현을 조건으로 한<br>백본 무관 이미지 보정 어댑터</h1>
+    <p class="title-en">A Backbone-Agnostic Image Enhancement Adaptor Conditioned on Few-Shot Distribution Latents</p>
+    <p class="authors">류준호</p>
+    <p class="affil">VBLAB</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="keywords" aria-labelledby="kw-h">
+    <h2 id="kw-h">키워드</h2>
+    <ul class="chips">
+      <li>이미지 향상 <span>Image Enhancement</span></li>
+      <li>노출 보정 <span>Exposure Correction</span></li>
+      <li>저조도 이미지 향상 <span>Low-Light Image Enhancement</span></li>
+      <li>도메인 적응 <span>Domain Adaptation</span></li>
+      <li>분포 정합 <span>Distribution Alignment</span></li>
+      <li>데이터셋 잠재 표현 <span>Dataset Latent</span></li>
+      <li>소수 샷 학습 <span>Few-Shot Learning</span></li>
+      <li>백본 무관 어댑터 <span>Backbone-Agnostic Adaptor</span></li>
+    </ul>
+  </section>
+
+  <section id="summary" aria-labelledby="sum-h">
+    <h2 id="sum-h">요약</h2>
+    <dl class="summary">
+      <div>
+        <dt>배경</dt>
+        <dd>저조도 개선 및 노출 보정 작업에서 이미지 품질은 밝기만으로 정해지지 않고 색감·톤이 함께 맞아야 하며, 선호하는 밝기와 색은 환경마다 다르다. 그래서 데이터셋마다 정답(GT) 이미지의 분포가 다르고, 한 데이터셋으로 학습한 모델은 다른 환경에서 성능이 크게 떨어진다.</dd>
+      </div>
+      <div>
+        <dt>기존 한계</dt>
+        <dd>기존 연구는 데이터셋마다 모델을 따로 학습해 평가하므로 실환경에 그대로 쓸 범용 모델이 없고, 재학습·미세조정은 목표 환경의 학습 쌍이나 모델 내부 접근을 요구한다.</dd>
+      </div>
+      <div>
+        <dt>제안</dt>
+        <dd>목표 환경의 참조(정답) 이미지 몇 장에서 그 분포를 나타내는 잠재 벡터를 뽑는 인코더와, 그 벡터를 조건으로 임의의 고정된 모델 출력을 목표 분포에 맞추는 어댑터를 결합한다. 이미 학습된 모델에 재학습 없이 부착해 현장 조건에 맞게 개선할 수 있다.</dd>
+      </div>
+      <div>
+        <dt>결과</dt>
+        <dd>공개 백본 13종과 벤치마크 8종에서 학습하지 않은 데이터셋의 PSNR 을 평균 2.80 dB 높였다.</dd>
+      </div>
+    </dl>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>작성 중인 페이지입니다. 마지막 수정 <time datetime="2026-10-06">2026년 10월</time>.</p>
+</footer>
+</body>
+</html>
